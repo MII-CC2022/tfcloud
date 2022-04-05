@@ -1,0 +1,16 @@
+resource "google_compute_instance" "default" {
+  name= "new-vm"
+  machine_type= "f1-micro"
+  zone = "europe-central2-b"
+  boot_disk{
+    initialize_params{
+       image= "ubuntu-1804-bionic-v20190307"
+    }
+  }
+  
+  network_interface{
+   network = "default"
+   access_config {
+   }
+  }
+}
