@@ -4,7 +4,7 @@ resource "google_compute_instance" "default" {
   zone = "europe-central2-b"
   boot_disk{
     initialize_params{
-       image= "ubuntu-1804-bionic-v20190307"
+       image= "debian-10-buster-v20220317"
     }
   }
   
